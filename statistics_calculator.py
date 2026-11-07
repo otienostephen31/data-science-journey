@@ -1,14 +1,17 @@
-# My Data Science Journey
 
-Hello! I am a university student studying Economics and Statistics.
+import statistics
 
-## My Goals
-- Learn Python
-- Master Statistics
-- Learn Data Analysis
-- Become a Data Scientist
+print("MY STATISTICAL CALCULATOR")
 
-## Skills
-- Computer Applications
-- Excel
-- Beginner Python
+numbers = input("Enter numbers separated by commas: ")
+
+data = [float(x.strip()) for x in numbers.split(",")]
+
+mean = statistics.mean(data)
+median = statistics.median(data)
+mode = statistics.multimode(data)
+
+print("\n--- RESULTS ---")
+print("Mean:", mean)
+print("Median:", median)
+print("Mode:", mode)
